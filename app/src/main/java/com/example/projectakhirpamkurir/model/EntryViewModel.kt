@@ -7,7 +7,26 @@ import androidx.lifecycle.ViewModel
 import com.example.projectakhirpamkurir.data.Kurir
 import com.example.projectakhirpamkurir.repositori.RepositoriKurir
 
+class EntryViewModel (private val repositoriKurir: RepositoriKurir) : ViewModel(){
+    var uiStateKurir by mutableStateOf(UIStateKurir())
+        private set
 
+    private fun validasiInput(uiState: DetailKurir = uiStateKurir.detailKurir): Boolean{
+        return with(uiState){
+            alamat.isNotBlank() && telepon.isNotBlank() && beratbarang.isNotBlank() && statuspengiriman.isNotBlank()  && namakurir.isNotBlank()
+        }
+    }
+    fun updateUIState(detailKurir: DetailKurir){
+        uiStateKurir =
+            UIStateKurir(detailKurir = detailKurir, isEntryValid = validasiInput(detailKurir))
+    }
+    /* Fungsi untuk menyimpan data yang di-entry */
+    suspend fun saveKurir() {
+        if (validasiInput()){
+            repositoriKurir.insertKurir(uiStateKurir.detailKurir.toKurir())
+        }
+    }
+}
 
 //Mewakili Status UI untuk kurir
 data class UIStateKurir(
