@@ -10,7 +10,6 @@ class OfflineRepositoriKurir(private val kurirDao: KurirDao) : RepositoriKurir {
     override fun getKurirStream(id: Int): Flow<Kurir?> {
         return kurirDao.getKurir(id)
     }
-
     override suspend fun insertKurir(kurir: Kurir) = kurirDao.insert(kurir)
     override suspend fun deleteKurir(kurir: Kurir) = kurirDao.delete(kurir)
 
