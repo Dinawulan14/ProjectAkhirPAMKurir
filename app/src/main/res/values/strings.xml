@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">ProjectAkhirPAMKurir</string>
     <string name="entry_kurir">Tambah Data Paket</string>
-    <string name="deskripsi_no_item">Tidak ada data Paket. Tap + untuk menambah data</string>
+    <string name="deskripsi_no_item">Tidak ada Data Antar Paket. Tap + untuk memasukkan data Paket yang akan diantarkan!</string>
     <string name="nama">Nama Kurir</string>
     <string name="alamat">Alamat Toko</string>
-    <string name="telpon">Telpon Customer</string>
-    <string name="nama1">Nama Customer</string>
+    <string name="telepon">Telepon Customer</string>
+    <string name="nama_customer">Nama Customer</string>
     <string name="alamat1">Alamat Customer</string>
-    <string name="telpon1">Telpon Customer</string>
+    <string name="telepon1">Telepon Customer</string>
     <string name="required_field">* required fields</string>
     <string name="btn_submit">Submit</string>
     <string name="detail_kurir">Detail Kurir</string>
