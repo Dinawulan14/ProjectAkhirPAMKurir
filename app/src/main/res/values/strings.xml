@@ -11,7 +11,12 @@
     <string name="required_field">* required fields</string>
     <string name="btn_submit">Submit</string>
     <string name="detail_kurir">Detail Kurir</string>
+    <string name="detail_customer">Detail Customer</string>
     <string name="edit_kurir">Edit Kurir</string>
+    <string name="edit_data">Edit Data</string>
+    <string name="berat_barang">Berat Barang</string>
+    <string name="status_pengiriman">Status Pengiriman</string>
+    <string name="nama_kurir">Nama Kurir</string>
     <string name="back">Back</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
