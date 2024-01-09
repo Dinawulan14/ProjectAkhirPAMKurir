@@ -12,5 +12,5 @@ data class Kurir(
     val namacustomer: String,
     val beratbarang: String,
     val statuspengiriman: String,
-    val namakurir: String
+    val namakurir: String,
 )
