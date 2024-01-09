@@ -17,14 +17,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.projectakhirpamkurir.DestinasiEntry
 import com.example.projectakhirpamkurir.DestinasiHome
+import com.example.projectakhirpamkurir.DetailsDestination
+import com.example.projectakhirpamkurir.DetailsScreen
+import com.example.projectakhirpamkurir.EntryKurirScreen
 import com.example.projectakhirpamkurir.HomeScreen
-import com.example.projectakhirpamkurir.ui.theme.halaman.DestinasiEntry
-import com.example.projectakhirpamkurir.ui.theme.halaman.DetailsDestination
-import com.example.projectakhirpamkurir.ui.theme.halaman.DetailsScreen
-import com.example.projectakhirpamkurir.ui.theme.halaman.EntryKurirScreen
-import com.example.projectakhirpamkurir.ui.theme.halaman.ItemEditDestination
-import com.example.projectakhirpamkurir.ui.theme.halaman.ItemEditScreen
+import com.example.projectakhirpamkurir.ItemEditDestination
+import com.example.projectakhirpamkurir.ItemEditScreen
+import com.example.projectakhirpamkurir.R
 
 @Composable
 fun KurirApp(navController: NavHostController = rememberNavController()){
@@ -103,7 +104,4 @@ fun HostNavigasi(
                 onNavigateUp = { navController.navigateUp() })
         }
     }
-}
-
-
 }
