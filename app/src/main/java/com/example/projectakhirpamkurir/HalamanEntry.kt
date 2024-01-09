@@ -28,6 +28,7 @@ import com.example.projectakhirpamkurir.model.EntryViewModel
 import com.example.projectakhirpamkurir.model.PenyediaViewModel
 import com.example.projectakhirpamkurir.model.UIStateKurir
 import com.example.projectakhirpamkurir.navigasi.DestinasiNavigasi
+import com.example.projectakhirpamkurir.navigasi.KurirTopAppBar
 import kotlinx.coroutines.launch
 
 object DestinasiEntry: DestinasiNavigasi {
