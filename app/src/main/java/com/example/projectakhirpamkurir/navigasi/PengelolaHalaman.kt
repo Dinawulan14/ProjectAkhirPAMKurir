@@ -13,8 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.projectakhirpamkurir.DestinasiHome
+import com.example.projectakhirpamkurir.HomeScreen
 
 @Composable
 fun KurirApp(navController: NavHostController = rememberNavController()){
@@ -55,4 +57,14 @@ fun HostNavigasi(
         startDestination = DestinasiHome.route,
         modifier = Modifier
     )
+    {
+        composable(DestinasiHome.route) {
+            HomeScreen(
+                navigateToItemEntry = { navController.navigate(DestinasiEntry.route) },
+                onDetailClick = {
+                    navController.navigate("${DetailsDestination.route}/$it")
+                }
+            )
+        }
+
 }
