@@ -3,6 +3,7 @@ package com.example.projectakhirpamkurir.model
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.projectakhirpamkurir.DetailsDestination
 import com.example.projectakhirpamkurir.repositori.RepositoriKurir
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

@@ -43,6 +43,7 @@ import com.example.projectakhirpamkurir.navigasi.KurirTopAppBar
 import kotlinx.coroutines.launch
 import androidx.compose.ui.text.font.FontWeight.Companion as FontWeight1
 
+
 object DetailsDestination : DestinasiNavigasi {
     override val route = "item_details"
     override val titleRes = R.string.detail_customer
@@ -106,7 +107,7 @@ private fun ItemDetailsBody(
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
     ){
         var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
-        ItemDetails(kurir = itemDetailUiState.detailKurir.toKurir(), modifier = Modifier.fillMaxWidth()
+        ItemDetails(kurir = itemDetailUiState.detailKurir.toKurir(), Modifier.fillMaxWidth()
         )
         OutlinedButton(
             onClick = {deleteConfirmationRequired = true },
