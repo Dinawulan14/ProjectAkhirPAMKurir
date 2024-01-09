@@ -37,6 +37,7 @@ import com.example.projectakhirpamkurir.data.Kurir
 import com.example.projectakhirpamkurir.model.HomeViewModel
 import com.example.projectakhirpamkurir.model.PenyediaViewModel
 import com.example.projectakhirpamkurir.navigasi.DestinasiNavigasi
+import com.example.projectakhirpamkurir.navigasi.KurirTopAppBar
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"

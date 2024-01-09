@@ -39,8 +39,10 @@ import com.example.projectakhirpamkurir.model.DetailViewModel
 import com.example.projectakhirpamkurir.model.ItemDetailUiState
 import com.example.projectakhirpamkurir.model.PenyediaViewModel
 import com.example.projectakhirpamkurir.navigasi.DestinasiNavigasi
+import com.example.projectakhirpamkurir.navigasi.KurirTopAppBar
 import kotlinx.coroutines.launch
 import androidx.compose.ui.text.font.FontWeight.Companion as FontWeight1
+
 
 object DetailsDestination : DestinasiNavigasi {
     override val route = "item_details"
@@ -105,7 +107,7 @@ private fun ItemDetailsBody(
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
     ){
         var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
-        ItemDetails(kurir = itemDetailUiState.detailKurir.toKurir(), modifier = Modifier.fillMaxWidth()
+        ItemDetails(kurir = itemDetailUiState.detailKurir.toKurir(), Modifier.fillMaxWidth()
         )
         OutlinedButton(
             onClick = {deleteConfirmationRequired = true },
