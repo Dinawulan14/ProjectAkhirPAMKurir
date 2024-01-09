@@ -12,13 +12,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.projectakhirpamkurir.DestinasiHome
 import com.example.projectakhirpamkurir.HomeScreen
 import com.example.projectakhirpamkurir.ui.theme.halaman.DestinasiEntry
+import com.example.projectakhirpamkurir.ui.theme.halaman.DetailsDestination
+import com.example.projectakhirpamkurir.ui.theme.halaman.DetailsScreen
 import com.example.projectakhirpamkurir.ui.theme.halaman.EntryKurirScreen
+import com.example.projectakhirpamkurir.ui.theme.halaman.ItemEditDestination
+import com.example.projectakhirpamkurir.ui.theme.halaman.ItemEditScreen
 
 @Composable
 fun KurirApp(navController: NavHostController = rememberNavController()){
@@ -73,6 +79,31 @@ fun HostNavigasi(
                 navigateBack = { navController.popBackStack() },
             )
         }
+        composable(
+            DetailsDestination.routeWithArg,
+            arguments = listOf(navArgument(DetailsDestination.kurirIdArg) {
+                type = NavType.IntType
+            })
+        ) {
+            DetailsScreen(
+                navigateBack = { navController.popBackStack() },
+                navigateToEditItem = {
+                    navController.navigate("${ItemEditDestination.route}/$it")
+                }
+            )
+        }
+        composable(
+            ItemEditDestination.routeWithArgs,
+            arguments = listOf(navArgument(ItemEditDestination.itemIdArg) {
+                type = NavType.IntType
+            })
+        ) {
+            ItemEditScreen(
+                navigateBack = { navController.popBackStack() },
+                onNavigateUp = { navController.navigateUp() })
+        }
+    }
+}
 
 
 }
