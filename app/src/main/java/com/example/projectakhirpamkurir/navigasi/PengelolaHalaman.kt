@@ -17,6 +17,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.projectakhirpamkurir.DestinasiHome
 import com.example.projectakhirpamkurir.HomeScreen
+import com.example.projectakhirpamkurir.ui.theme.halaman.DestinasiEntry
+import com.example.projectakhirpamkurir.ui.theme.halaman.EntryKurirScreen
 
 @Composable
 fun KurirApp(navController: NavHostController = rememberNavController()){
@@ -66,5 +68,11 @@ fun HostNavigasi(
                 }
             )
         }
+        composable(DestinasiEntry.route) {
+            EntryKurirScreen(
+                navigateBack = { navController.popBackStack() },
+            )
+        }
+
 
 }
