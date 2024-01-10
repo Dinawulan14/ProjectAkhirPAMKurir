@@ -70,7 +70,6 @@ fun EntryKurirScreen(
                 .verticalScroll(rememberScrollState())
                 .fillMaxWidth()
         )
-
     }
 }
 
