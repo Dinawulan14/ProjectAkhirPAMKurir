@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Kurir Antar Barang</string>
+    <string name="halamanhome">HalamanHome</string>
     <string name="entry_kurir">Tambah Data Paket</string>
     <string name="deskripsi_no_item">Tidak ada Data Antar Paket. Tap + untuk memasukkan data Paket yang akan diantarkan!</string>
     <string name="nama">Nama Kurir</string>
