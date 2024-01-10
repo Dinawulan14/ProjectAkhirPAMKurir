@@ -9,9 +9,9 @@
     <string name="alamat1">Alamat Customer</string>
     <string name="telepon1">Telepon Customer</string>
     <string name="required_field">* required fields</string>
-    <string name="btn_submit"> Masuk</string>
+    <string name="btn_submit">Submit</string>
     <string name="detail_kurir">Detail Kurir</string>
-    <string name="btn_next">Next</string>
+    <string name="btn_next">Masuk</string>
     <string name="detail_customer">Detail Customer</string>
     <string name="edit_kurir">Edit Kurir</string>
     <string name="edit_data">Edit Data</string>
