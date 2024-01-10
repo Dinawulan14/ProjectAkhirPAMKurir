@@ -1,4 +1,4 @@
-package com.example.projectakhirpamkurir
+package com.example.projectakhirpamkurir.ui.theme.halaman
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -8,6 +8,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.projectakhirpamkurir.R
 import com.example.projectakhirpamkurir.model.EditViewModel
 import com.example.projectakhirpamkurir.model.PenyediaViewModel
 import com.example.projectakhirpamkurir.navigasi.DestinasiNavigasi

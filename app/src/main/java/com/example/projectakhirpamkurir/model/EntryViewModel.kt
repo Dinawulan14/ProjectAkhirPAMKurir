@@ -41,7 +41,8 @@ data class DetailKurir(
     val beratbarang: String = "",
     val statuspengiriman: String = "",
     val namakurir: String = ""
-)
+) {
+}
 
 fun DetailKurir.toKurir(): Kurir = Kurir(
     id = id,
@@ -49,7 +50,7 @@ fun DetailKurir.toKurir(): Kurir = Kurir(
     telepon = telepon,
     beratbarang = beratbarang,
     statuspengiriman = statuspengiriman,
-    namakurir = namakurir
+    namakurir = namakurir,
 )
 
 fun Kurir.toUiStateKurir(isEntryValid: Boolean = false): UIStateKurir = UIStateKurir(

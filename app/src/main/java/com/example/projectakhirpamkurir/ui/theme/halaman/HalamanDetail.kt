@@ -1,4 +1,4 @@
-package com.example.projectakhirpamkurir
+package com.example.projectakhirpamkurir.ui.theme.halaman
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
@@ -32,12 +32,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.projectakhirpamkurir.R
 import com.example.projectakhirpamkurir.data.Kurir
 import com.example.projectakhirpamkurir.model.DetailViewModel
 import com.example.projectakhirpamkurir.model.ItemDetailUiState
 import com.example.projectakhirpamkurir.model.PenyediaViewModel
+import com.example.projectakhirpamkurir.model.toKurir
 import com.example.projectakhirpamkurir.navigasi.DestinasiNavigasi
 import com.example.projectakhirpamkurir.navigasi.KurirTopAppBar
 import kotlinx.coroutines.launch
@@ -214,4 +215,3 @@ private fun DeleteConfirmationDialog(
             }
         })
 }
-

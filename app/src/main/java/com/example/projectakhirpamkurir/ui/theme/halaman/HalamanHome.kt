@@ -32,6 +32,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.projectakhirpamkurir.R
@@ -172,7 +173,6 @@ fun DataKurir(
                 text = kurir.alamat,
                 style = MaterialTheme.typography.titleMedium
             )
-            Spacer(Modifier.weight(1f))
             Icon(
                 imageVector = Icons.Default.Favorite,
                 contentDescription = null
@@ -181,7 +181,6 @@ fun DataKurir(
                 text = kurir.statuspengiriman,
                 style = MaterialTheme.typography.titleLarge,
             )
-            Spacer(Modifier.weight(1f))
             Icon(
                 imageVector = Icons.Default.ShoppingCart,
                 contentDescription = null,
@@ -191,5 +190,26 @@ fun DataKurir(
                 style = MaterialTheme.typography.titleLarge,
             )
         }
+    }
+}
+
+@Preview
+@Composable
+fun DataKurirPreview() {
+    val sampleKurir = Kurir(
+        namakurir = "Nama Kurir",
+        telepon = "123-456-789",
+        alamat = "Jalan Contoh No. 123",
+        statuspengiriman = "Dalam Pengiriman",
+        beratbarang = "2 kg"
+    )
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        DataKurir(kurir = sampleKurir)
     }
 }

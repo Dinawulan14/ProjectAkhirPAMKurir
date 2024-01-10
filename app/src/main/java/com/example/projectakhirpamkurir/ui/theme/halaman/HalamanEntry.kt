@@ -1,4 +1,4 @@
-package com.example.projectakhirpamkurir
+package com.example.projectakhirpamkurir.ui.theme.halaman
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,6 +23,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.projectakhirpamkurir.R
 import com.example.projectakhirpamkurir.model.DetailKurir
 import com.example.projectakhirpamkurir.model.EntryViewModel
 import com.example.projectakhirpamkurir.model.PenyediaViewModel

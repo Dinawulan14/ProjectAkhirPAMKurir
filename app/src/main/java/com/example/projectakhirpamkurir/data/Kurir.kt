@@ -9,7 +9,6 @@ data class Kurir(
     val id: Int = 0,
     val alamat: String,
     val telepon: String,
-    val namacustomer: String,
     val beratbarang: String,
     val statuspengiriman: String,
     val namakurir: String
