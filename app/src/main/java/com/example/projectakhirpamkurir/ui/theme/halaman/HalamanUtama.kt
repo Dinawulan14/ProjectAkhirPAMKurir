@@ -23,10 +23,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.projectakhirpamkurir.R
 import com.example.projectakhirpamkurir.navigasi.DestinasiNavigasi
+import com.example.projectakhirpamkurir.ui.theme.ProjectAkhirPAMKurirTheme
 
 object DestinasiUtama: DestinasiNavigasi {
     override val route = "home"
@@ -62,7 +64,7 @@ fun HalamanUtama(
                     contentScale = ContentScale.Crop
                 )
                 Text(
-                    text = "es Teh",
+                    text = "Si Kurir",
                     color = Color.DarkGray,
                     fontFamily = FontFamily.Cursive,
                     fontSize = 35.sp,
@@ -93,5 +95,12 @@ fun HalamanUtama(
                 Text(stringResource(R.string.btn_next))
             }
         }
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun PreviewHalamanHome() {
+    ProjectAkhirPAMKurirTheme {
+        HalamanUtama(onNextButtonClicked = {})
     }
 }
