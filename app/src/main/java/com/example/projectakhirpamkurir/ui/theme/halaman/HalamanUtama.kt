@@ -31,7 +31,7 @@ import com.example.projectakhirpamkurir.navigasi.DestinasiNavigasi
 import com.example.projectakhirpamkurir.ui.theme.ProjectAkhirPAMKurirTheme
 
 object DestinasiUtama: DestinasiNavigasi {
-    override val route = "home"
+    override val route = "halaman_utama"
     override val titleRes = R.string.halamanhome
 }
 
