@@ -17,15 +17,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.projectakhirpamkurir.DestinasiEntry
-import com.example.projectakhirpamkurir.DestinasiHome
-import com.example.projectakhirpamkurir.DetailsDestination
-import com.example.projectakhirpamkurir.DetailsScreen
-import com.example.projectakhirpamkurir.EntryKurirScreen
 import com.example.projectakhirpamkurir.HomeScreen
-import com.example.projectakhirpamkurir.ItemEditDestination
-import com.example.projectakhirpamkurir.ItemEditScreen
 import com.example.projectakhirpamkurir.R
+import com.example.projectakhirpamkurir.ui.theme.halaman.DestinasiEntry
+import com.example.projectakhirpamkurir.ui.theme.halaman.DestinasiUtama
+import com.example.projectakhirpamkurir.ui.theme.halaman.DetailsDestination
+import com.example.projectakhirpamkurir.ui.theme.halaman.DetailsScreen
+import com.example.projectakhirpamkurir.ui.theme.halaman.EntryKurirScreen
+import com.example.projectakhirpamkurir.ui.theme.halaman.HalamanUtama
+import com.example.projectakhirpamkurir.ui.theme.halaman.ItemEditDestination
+import com.example.projectakhirpamkurir.ui.theme.halaman.ItemEditScreen
 
 @Composable
 fun KurirApp(navController: NavHostController = rememberNavController()){
@@ -67,6 +68,11 @@ fun HostNavigasi(
         modifier = Modifier
     )
     {
+        composable(DestinasiUtama.route) {
+            HalamanUtama(
+                onNextButtonClicked = { navController.navigate(DestinasiHome.route)}
+            )
+        }
         composable(DestinasiHome.route) {
             HomeScreen(
                 navigateToItemEntry = { navController.navigate(DestinasiEntry.route) },
