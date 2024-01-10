@@ -1,5 +1,6 @@
 package com.example.projectakhirpamkurir.navigasi
 
+import HomeScreen
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -17,7 +18,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.projectakhirpamkurir.HomeScreen
 import com.example.projectakhirpamkurir.R
 import com.example.projectakhirpamkurir.ui.theme.halaman.DestinasiEntry
 import com.example.projectakhirpamkurir.ui.theme.halaman.DestinasiUtama
@@ -64,7 +64,7 @@ fun HostNavigasi(
 ) {
     NavHost(
         navController = navController,
-        startDestination = DestinasiHome.route,
+        startDestination = DestinasiUtama.route,
         modifier = Modifier
     )
     {
