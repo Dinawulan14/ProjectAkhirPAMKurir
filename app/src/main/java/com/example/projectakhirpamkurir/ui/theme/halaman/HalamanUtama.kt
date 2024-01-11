@@ -5,12 +5,15 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -27,6 +30,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -39,6 +43,7 @@ object DestinasiUtama: DestinasiNavigasi {
     override val titleRes = R.string.halamanhome
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HalamanUtama(
     onNextButtonClicked: () -> Unit
@@ -100,11 +105,30 @@ fun HalamanUtama(
             }
             var ListDataTxt: MutableList<String> = mutableListOf(emailTxt, passwordTxt)
 
-            Button(
-                modifier = Modifier.weight(1f),
-                onClick = onNextButtonClicked,
+            Column(
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .padding(5.dp)
+                    .fillMaxSize(1f)
             ) {
-                Text(stringResource(R.string.btn_next))
+                OutlinedTextField(value = emailTxt, onValueChange = {
+                    emailTxt = it
+                }, label = {
+                    Text(text = "Email")
+                })
+                OutlinedTextField(value = passwordTxt, onValueChange = {
+                    passwordTxt = it
+                }, label = {
+                    Text(text = "Password")
+                },
+                    visualTransformation = PasswordVisualTransformation())
+
+                Button(
+                    onClick = onNextButtonClicked
+                ) {
+                    Text(stringResource(R.string.btn_next))
+                }
             }
         }
     }
