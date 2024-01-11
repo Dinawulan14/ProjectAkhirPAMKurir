@@ -201,7 +201,7 @@ private fun DeleteConfirmationDialog(
 ) {
     AlertDialog(onDismissRequest = { /*TODO*/ },
         title = { Text(stringResource(R.string.attention)) },
-        text = { Text(stringResource(R.string.delete)) },
+        text = { Text(stringResource(R.string.tanya)) },
         modifier = modifier,
         dismissButton = {
             TextButton(onClick = onDeleteCancel) {
